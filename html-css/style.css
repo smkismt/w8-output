@@ -1,3 +1,11 @@
+section > p {
+  margin: 0;
+  padding: 0 0 0 15px;
+  color: #000;
+  background-color: #fff;
+  font-size: x-large;
+}
+
 .container {
   margin: 0px;
   padding: 0px;
@@ -8,10 +16,10 @@
   /* box-sizing: border-box; */
 }
 
-.container-item-col4 {
-  list-style: none;
+.container-item-col4,
+.container-item-col2,
+.container-item-col6 {
   height: 150px;
-  flex: 0 0 calc(25% - 20px); /* 横4 × 縦4のグリッドに対応するために修正 */
   margin: 10px;
   color: #fff;
   background-color: #333;
@@ -23,39 +31,51 @@
   align-items: center;
   justify-content: center;
   font-size: larger;
-  /* box-sizing: border-box; */
+}
+
+.container-item-col4 {
+  list-style: none;
+  flex: 0 0 calc(25% - 20px); /* 横4 × 縦4のグリッドに対応するために修正 */
 }
 
 .container-item-col2 {
-  height: 150px;
   flex: 0 0 calc(50% - 20px);
-  margin: 10px;
-  color: #fff;
-  background-color: #333;
-  border-style: solid;
-  border-radius: 15px;
-  border-color: #ff06ff;
-  border-width: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: larger;
-  /* box-sizing: border-box; */
 }
 
 .container-item-col6 {
-  height: 150px;
   flex: auto;
-  margin: 10px;
+}
+
+.login-form {
+  background-color: #3b3b3b;
   color: #fff;
-  background-color: #333;
-  border-style: solid;
-  border-radius: 15px;
-  border-color: #ff06ff;
-  border-width: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: larger;
-  /* box-sizing: border-box; */
+  height: 460px;
+}
+
+h1,
+.login-table {
+  padding-left: 15px;
+}
+
+.login-email,
+.login-password,
+.login-button {
+  padding: 15px;
+  min-width: 500px;
+  border-radius: 10px;
+  border: 2.5px solid #131d2d00;
+  background-color: #c9d1d9;
+  cursor: pointer;
+}
+
+.login-button {
+  margin-top: 32px;
+  display: block;
+  background-color: #0761f1;
+  color: #fff;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #0761f1;
 }
