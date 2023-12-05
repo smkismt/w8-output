@@ -13,14 +13,13 @@ section > p {
   display: flex;
   flex-wrap: wrap;
   background: linear-gradient(190deg, #d558c8, #24d292);
-  /* box-sizing: border-box; */
 }
 
 .container-item-col4,
 .container-item-col2,
 .container-item-col6 {
   height: 150px;
-  margin: 10px;
+  margin: 10px; /* 左右で10pxづつ設けているため、 flexの際に邪魔になる*/
   color: #fff;
   background-color: #333;
   border-style: solid;
@@ -31,11 +30,14 @@ section > p {
   align-items: center;
   justify-content: center;
   font-size: larger;
+  /* box-sizing: border-box; */
 }
 
 .container-item-col4 {
   list-style: none;
-  flex: 0 0 calc(25% - 20px); /* 横4 × 縦4のグリッドに対応するために修正 */
+  /* 横4 × 縦4のグリッドに対応するためにmargin 10pxの左右分だけ修正
+   box-sizing: border-boxが上手く使えないため、代替案*/
+  flex: 0 0 calc(25% - 20px);
 }
 
 .container-item-col2 {
